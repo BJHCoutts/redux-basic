@@ -1,12 +1,6 @@
 import React from 'react'
 
-import { connect } from 'react-redux'
-
-import { activateGeod, closeGeod } from './redux'
-
-// App.js
-
-export class App extends React.Component {
+export default class App extends React.Component {
   render () {
     return(
       <main>
@@ -26,21 +20,3 @@ export class App extends React.Component {
     )
   }
 }
-
-// AppContainer.js
-
-const mapStateToProps = state => ({
-  geod: state.geod,
-})
-
-const mapDispatchToProps = {
-  activateGeod,
-  closeGeod,
-}
-
-const AppContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
-
-export default AppContainer
